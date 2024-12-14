@@ -7,7 +7,7 @@
 }
 
 [data-theme="dark"] {
-    --bg-color: #121212; /* Fallback solid background for dark theme */
+    --bg-color: #121212;
     --text-color: white;
     --primary-color: #1e90ff;
 }
