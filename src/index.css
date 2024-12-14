@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #6200ea;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: white;
+    --primary-color: #1e90ff;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Outfit", sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -14,6 +33,12 @@ a {
 
 .app {
     min-height: 100vh;
-    color: white;
+    background: var(--bg-color); /* Use CSS variable for theme */
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s ease-in-out;
+}
+
+[data-theme="dark"] .app {
+    /* Apply the gradient specifically for the dark theme */
     background: linear-gradient(#0b004e, #1d152f, #002834);
 }

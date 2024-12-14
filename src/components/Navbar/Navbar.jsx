@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
+import { useContext, useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import arrow_icon from "../../assets/arrow_icon.png";
 import { CoinContext } from "../../context/CoinContext";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Navbar = () => {
   const { setCurrency } = useContext(CoinContext);
+  const { toggleTheme, theme } = useContext(ThemeContext);
 
   const currencyHandler = (event) => {
     switch (event.target.value) {
@@ -15,11 +17,11 @@ const Navbar = () => {
         break;
       }
       case "eur": {
-        setCurrency({ name: "eur", symbol: "pounds" });
+        setCurrency({ name: "eur", symbol: "€" });
         break;
       }
       case "inr": {
-        setCurrency({ name: "inr", symbol: "inr" });
+        setCurrency({ name: "inr", symbol: "₹" });
         break;
       }
       default: {
@@ -31,7 +33,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Link to={"/"}>
-        <img src={logo} alt="" className="logo" />
+        <img src={logo} alt="Logo" className="logo" />
       </Link>
       <ul>
         <Link to={"/"}>
@@ -48,7 +50,10 @@ const Navbar = () => {
           <option value="inr">INR</option>
         </select>
         <button>
-          Sign up <img src={arrow_icon} alt="" />
+          Sign up <img src={arrow_icon} alt="Arrpw Ocpm" />
+        </button>
+        <button className="toggle-theme-btn" onClick={toggleTheme}>
+          {theme === "light" ? "Dark Mode" : "Light Mode"}
         </button>
       </div>
     </div>
