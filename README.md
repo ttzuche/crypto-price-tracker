@@ -24,18 +24,12 @@ Welcome to **Cryptoogle**, the ultimate cryptocurrency price tracking platform. 
 - **Dark Mode**: A sleek, visually rich interface for low-light environments.
 - Users can toggle between light and dark themes seamlessly.
 
-### 4. **Responsive Design**
-- Fully responsive for all devices:
-  - Desktop
-  - Tablet
-  - Mobile
-
-### 5. **Dynamic Table**
+### 4. **Dynamic Table**
 - Alternating row colors for better readability.
 - Smooth hover effects for an interactive experience.
 - Pagination-ready structure for large datasets.
 
-### 6. **Real-Time Updates**
+### 5. **Real-Time Updates**
 - Pulls cryptocurrency data dynamically and updates the table view in real-time.
 
 ---
